@@ -13,6 +13,7 @@ namespace ProductCatalog.Resources.Commands.Delete
         _dbContext = dbContext;
     }
 
+        //samo s warianta bez kontroller se polzwa
     public async Task<Product> Handle(DeleteProductCommand request, CancellationToken cancellationToken)
     {
         var product = _dbContext.Products.FirstOrDefault(p => p.Id == request.Id);
